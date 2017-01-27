@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AuthenticationVC.swift
 //  touchid
 //
 //  Created by Kristina Dev on 1/27/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AuthenticationVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

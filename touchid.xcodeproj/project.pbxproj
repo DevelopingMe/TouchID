@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B2458221E3BDD6900216B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2458211E3BDD6900216B22 /* AppDelegate.swift */; };
-		8B2458241E3BDD6900216B22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2458231E3BDD6900216B22 /* ViewController.swift */; };
+		8B2458241E3BDD6900216B22 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2458231E3BDD6900216B22 /* AuthenticationVC.swift */; };
 		8B2458271E3BDD6900216B22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2458251E3BDD6900216B22 /* Main.storyboard */; };
 		8B2458291E3BDD6900216B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B2458281E3BDD6900216B22 /* Assets.xcassets */; };
 		8B24582C1E3BDD6900216B22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B24582A1E3BDD6900216B22 /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		8B24581E1E3BDD6900216B22 /* touchid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = touchid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2458211E3BDD6900216B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8B2458231E3BDD6900216B22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B2458231E3BDD6900216B22 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		8B2458261E3BDD6900216B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B2458281E3BDD6900216B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B24582B1E3BDD6900216B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,6 +77,9 @@
 		8B2458151E3BDD6900216B22 = {
 			isa = PBXGroup;
 			children = (
+				8B2458511E3BDD8600216B22 /* Model */,
+				8B2458501E3BDD7E00216B22 /* View */,
+				8B24584F1E3BDD7100216B22 /* Controller */,
 				8B2458201E3BDD6900216B22 /* touchid */,
 				8B2458351E3BDD6900216B22 /* touchidTests */,
 				8B2458401E3BDD6900216B22 /* touchidUITests */,
@@ -98,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				8B2458211E3BDD6900216B22 /* AppDelegate.swift */,
-				8B2458231E3BDD6900216B22 /* ViewController.swift */,
+				8B2458231E3BDD6900216B22 /* AuthenticationVC.swift */,
 				8B2458251E3BDD6900216B22 /* Main.storyboard */,
 				8B2458281E3BDD6900216B22 /* Assets.xcassets */,
 				8B24582A1E3BDD6900216B22 /* LaunchScreen.storyboard */,
@@ -123,6 +126,27 @@
 				8B2458431E3BDD6900216B22 /* Info.plist */,
 			);
 			path = touchidUITests;
+			sourceTree = "<group>";
+		};
+		8B24584F1E3BDD7100216B22 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8B2458501E3BDD7E00216B22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8B2458511E3BDD8600216B22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B2458241E3BDD6900216B22 /* ViewController.swift in Sources */,
+				8B2458241E3BDD6900216B22 /* AuthenticationVC.swift in Sources */,
 				8B2458221E3BDD6900216B22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
