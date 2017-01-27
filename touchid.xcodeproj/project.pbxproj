@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B1878E61E3BF4F00090074F /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1878E51E3BF4F00090074F /* LocalAuthentication.framework */; };
 		8B2458221E3BDD6900216B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2458211E3BDD6900216B22 /* AppDelegate.swift */; };
 		8B2458241E3BDD6900216B22 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2458231E3BDD6900216B22 /* AuthenticationVC.swift */; };
 		8B2458271E3BDD6900216B22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2458251E3BDD6900216B22 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B1878E51E3BF4F00090074F /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		8B24581E1E3BDD6900216B22 /* touchid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = touchid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2458211E3BDD6900216B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B2458231E3BDD6900216B22 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B1878E61E3BF4F00090074F /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B1878E41E3BF4F00090074F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B1878E51E3BF4F00090074F /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8B2458151E3BDD6900216B22 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +97,7 @@
 				8B2458351E3BDD6900216B22 /* touchidTests */,
 				8B2458401E3BDD6900216B22 /* touchidUITests */,
 				8B24581F1E3BDD6900216B22 /* Products */,
+				8B1878E41E3BF4F00090074F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -533,6 +545,7 @@
 				8B2458481E3BDD6900216B22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B2458491E3BDD6900216B22 /* Build configuration list for PBXNativeTarget "touchidTests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +554,7 @@
 				8B24584B1E3BDD6900216B22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B24584C1E3BDD6900216B22 /* Build configuration list for PBXNativeTarget "touchidUITests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +563,7 @@
 				8B24584E1E3BDD6900216B22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
