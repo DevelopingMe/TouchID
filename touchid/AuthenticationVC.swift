@@ -32,12 +32,15 @@ class AuthenticationVC: UIViewController
                 if success
                 {
                     //Navigate to Success View Controller
+                    self.navigateToAuthenticatedVC()
                 }
                 else
                 {
-                    if let error = error
+                    if let error = error as? NSError
                     {
                         //Display Error
+                        let message = self.errorMessageForLAErrorCode(errorCode: error.code)
+                        self.showAlertViewAfterEvaluationPolicyWithMessage(message: message)
                     }
                 }
             })
@@ -46,6 +49,61 @@ class AuthenticationVC: UIViewController
         {
             showAlertViewForNoBiometrics()
             return
+        }
+    }
+    func showAlertViewAfterEvaluationPolicyWithMessage(message: String)
+    {
+        showAlertWithTitle(title: "Error", message: message)
+    }
+    
+    func errorMessageForLAErrorCode(errorCode: Int) -> String
+    {
+        var message = ""
+        switch errorCode
+        {
+        case LAError.appCancel.rawValue:
+            message = "Authentication was cancelled by application"
+            
+        case LAError.authenticationFailed.rawValue:
+            message = "The user failed to provide valid credentials"
+            
+        case LAError.invalidContext.rawValue:
+            message = "The context is invalid"
+            
+        case LAError.passcodeNotSet.rawValue:
+            message = "Passcode is not set on the device"
+            
+        case LAError.systemCancel.rawValue:
+            message = "Authentication was cancelled by the system"
+            
+        case LAError.touchIDLockout.rawValue:
+            message = "Too many failed attempts."
+            
+        case LAError.touchIDNotAvailable.rawValue:
+            message = "TouchID is not available on the device"
+            
+        case LAError.userCancel.rawValue:
+            message = "The user did cancel"
+            
+        case LAError.userFallback.rawValue:
+            message = "The user chose to use the fallback"
+            
+        default:
+            message = "Did not find error code on LAError object"
+
+        }
+        
+        return message
+    }
+    
+    func navigateToAuthenticatedVC()
+    {
+        if let loggedInVC = storyboard?.instantiateViewController(withIdentifier: "LoggedInVC")
+        {
+            DispatchQueue.main.async
+                {
+                    self.navigationController?.pushViewController(loggedInVC, animated: true)
+                }
         }
     }
     
@@ -61,7 +119,10 @@ class AuthenticationVC: UIViewController
         let okAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
         alertVC.addAction(okAction)
         
-        self.present(alertVC, animated: true, completion: nil)
+        DispatchQueue.main.async
+            {
+                self.present(alertVC, animated: true, completion: nil)
+            }
         
     }
     
